@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://shillber.byethost13.com/zhuye/?i=3 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="en-us" http-equiv="Content-Language">
+
+<meta name="viewport" content="width=device-width, initial-scale=0.9">
+<link rel="shortcut icon" href="http://shillber.byethost13.com/logo/logo.png">
+<script src="./index_files/jquery.js"></script>
+<title id="title">小舟横截春江，卧看翠壁红楼起。</title>
+<script type="text/javascript">
+var d = new Date()
+var time = d.getHours()
+if (time < 24) 
+{
+document.getElementById("title").innerHTML="Good evening!";
+}
+if (time < 19) 
+{
+document.getElementById("title").innerHTML="Good afternoon!";
+}
+if (time < 12) 
+{
+document.getElementById("title").innerHTML="Good morning!";
+}
+if (time < 5) 
+{
+document.getElementById("title").innerHTML="Go to sleep!";
+}
+</script>
+<style>
+/*下方这句不动它，翻译开始*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+li,ul{overflow:hidden;list-style:none;white-space:nowrap}
+
+
+/*翻译
+主页整体样式 
+文本对齐︰ 中心;
+背景色︰ #f1f6ee  使用夜间默认时修改为#000000即可
+}
+*/
+body {
+	text-align: center;
+    background-image:url('img/bg.jpg') !important;
+ /*可换上面的图片地址*/
+    background-size: 100% !important;
+    background-repeat: no-repeat;
+ 	background-color: #fffffff;
+  /*可删上面的固定句语*/
+}
+
+
+/*翻译
+搜索栏字体样式 
+宽度︰ 90%;
+高度︰ 40px;
+背景颜色︰ 透明;
+边境︰ 无;
+大纲︰ 0;
+字体大小︰ 18px;
+字体颜色: #000000;
+填充︰ 0 20px;
+边界半径︰ 50px
+}*/
+
+#search_input {
+	width: 90%;
+	height: 40px;
+	background-color: transparent;
+	border: none;
+	outline: 0;
+	font-size: 16px;
+	color: #4a4266;
+	padding: 0 10px;
+	border-radius: 50px
+}
+
+/*翻译
+搜索框边距 
+下边距︰ 30px;
+上边距︰ 20px;
+*/
+
+.search_part {
+	margin-bottom: 10px;
+	margin-top: 50px;
+}
+
+/*翻译
+跨度样式
+显示︰ 阻止;
+溢出︰ 隐藏;
+左填充︰ 5px;
+垂直对齐︰ 居中;
+*/
+
+span {
+	display: block;
+	font-size: 12px;
+	overflow: hidden;
+	padding-left: 2px;
+	vertical-align: middle;
+}
+
+/*翻译
+搜索栏框架样式 {
+框阴影︰ 0 0 18px rgba(70,70,40,.255);括号里的颜色为Rgb默认，可进入http://rgb.phpddt.com/查询
+-webkit 动画︰ fadeIn 2.5;
+动画︰ fadeIn 2.5;
+背景色︰ rgba(255,255,255,.100);
+边界半径︰ 50px;
+显示︰ 表;
+垂直对齐︰ 居中;
+宽度︰ 80%;根据你喜欢的宽度调整，目前我为了对齐图标使用80%
+高度︰ 40px;
+最大宽度︰ 400px;
+边距︰ 10px 默认布局;
+}
+*/
+
+.search_bar {
+	box-shadow: 0 0 5px rgba(70,70,40,.255);
+	-webkit-animation: fadeIn 2.5s;
+	animation: fadeIn 2.5s;
+	background-color:  rgba(255,255,255,.0);
+	border-radius: 3px;
+	display: table;
+	vertical-align: middle;
+	width: 80%;
+	height: 20px;
+	left:0;
+	right:0;
+	max-width: 400px;
+	margin: 10px auto;
+	position:absolute
+}
+
+/*翻译
+搜索栏搜索目标确认图标样式，目前为米奇
+轮廓边框︰ 0;
+高度︰ 40px;
+浮标位置︰ 右;
+颜色: #000;
+字体大小︰ 16px;
+字体粗细︰ 700;
+边境︰ 无;
+背景颜色︰ 透明;
+填充︰ 0 13px 0 13px
+*/
+
+#search_submit {
+	outline: 0;
+	height: 40px;
+	float: right;
+	color: #4a4266;
+	font-size: 18px;
+	font-weight: 500;
+	border: none;
+	background-color: transparent;
+	padding: 0 13px 0 13px
+}
+
+
+#suglist{position:absolute;width:auto;height:auto;left:-6px;right:-6px;top:48px;z-index:9}
+#suglist li{text-align:left;height:auto;margin:5px;background:rgba(255,255,255,0.3);padding:0.2em 0.3em 0.3em;border-radius:5px;box-shadow:0 0 3px #888}
+#suglist li:active{color:#fff;background:rgba(0,0,0,0.4)}
+#suglist b{position:absolute;right:0;color:#444}
+#suglist b:before{content:'加入';margin:0 16px}
+
+
+/*翻译
+书签图标排版目录样式 
+宽度︰ 100%;
+文本对齐︰ 中心;
+填充顶部︰ 15px;
+填充底部︰ 15px;
+*/
+
+#content {
+	width: 100%;
+	text-align: center;
+	position:absolute;
+	margin:40px auto;
+}
+
+
+/*翻译
+书签框架样式
+-webkit 动画︰ fadeInDown 1s;
+动画︰ fadeInDown 1s;
+位置︰ 相对应;
+显示︰ 显示在内部;
+宽度︰ 75px;
+边境︰ 0;
+*/
+
+.box {
+	-webkit-animation: fadeInDown 1s;
+	animation: fadeInDown 1s;
+	position: relative;
+	display: inline-block;
+	width: 75px;
+	border: 0;
+}
+
+
+/*翻译
+书签图标样式
+宽度︰ 100%;
+高度︰ 100%;
+位置︰ 不受限制;
+左︰ 0;
+顶︰ 0;
+*/
+
+.box a {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/*翻译
+书签字体样式
+颜色: #232323;使用夜间模式时修改为#eee或者#f2eada即可
+高度︰ 1.5em;
+线的高度︰ 1.5em;
+宽度︰ 72px;
+字体大小︰ 0.75em;
+白色空间︰ nowrap;
+溢出︰ 隐藏;
+边距︰ 默认布局;
+-webkit 边框顶部右半径︰ 5px;
+-webkit 边框底部右半径︰ 5px;
+文本溢出︰ 省略;
+-o 文本溢出︰ 省略;
+气相色谱-质谱-文本-溢出︰ 省略;
+填充顶部︰ 3px;
+填充底部︰ 8px;
+*/
+
+.url {
+	color: #4a4266;
+	height: 1.5em;
+	line-height: 1.5em;
+	width: 72px;
+	font-size: 0.75em;
+	white-space: nowrap;
+	overflow: hidden;
+	margin: auto;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	padding-top: 3px;
+	padding-bottom: 8px;
+}
+
+/*翻译
+字体样式 
+宽度︰ 3em;
+高度︰ 3em;
+最大宽度︰ 72px;
+*/
+
+.icon {
+	width: 3em;
+	height: 3em;
+	max-width: 72px;
+}
+
+.icon_guge {
+	width: 30em;
+	height: 6em;
+	max-width: 200px;
+}
+
+
+#app-items {
+	width: 100%;	
+	left:0;
+	right:0;
+	max-width: 400px;
+	margin: 120px auto 10px;
+	text-align: center;
+	position: absolute;
+	padding-top: 0px;
+	padding-bottom: 15px;
+}
+
+.title {
+    background-color: #fffffff;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px 0 20px;
+    color: #4a4266;
+
+}
+
+#yiyan {
+	width: 100%;
+	max-width: 400px;
+	margin: 0px auto;
+	text-align: center;
+	padding-top: 0px;
+	padding-bottom: 15px;
+}
+
+.shuxing {
+    color: #4a4266;
+    font-size: 12px;
+    height: 30px;
+    line-height: 20px;
+    padding: 0 10px 0 20px;
+}
+
+
+
+
+.ciba_ds_juzi {
+      height: auto!important;
+      float: none!important;
+}
+
+
+
+.ciba_ds_juzi a {
+     display:block;
+}
+
+
+
+@-webkit-keyframes flipInX {
+	0% {
+		-webkit-transform: perspective(400px) rotateX(90deg);
+		transform: perspective(400px) rotateX(90deg);
+		opacity: 0
+	}
+
+	40% {
+		-webkit-transform: perspective(400px) rotateX(-10deg);
+		transform: perspective(400px) rotateX(-10deg)
+	}
+
+	70% {
+		-webkit-transform: perspective(400px) rotateX(10deg);
+		transform: perspective(400px) rotateX(10deg)
+	}
+
+	100% {
+		-webkit-transform: perspective(400px) rotateX(0);
+		transform: perspective(400px) rotateX(0);
+		opacity: 1
+	}
+}
+
+@keyframes flipInX {
+	0% {
+		-webkit-transform: perspective(400px) rotateX(90deg);
+		-ms-transform: perspective(400px) rotateX(90deg);
+		transform: perspective(400px) rotateX(90deg);
+		opacity: 0
+	}
+
+	40% {
+		-webkit-transform: perspective(400px) rotateX(-10deg);
+		-ms-transform: perspective(400px) rotateX(-10deg);
+		transform: perspective(400px) rotateX(-10deg)
+	}
+
+	70% {
+		-webkit-transform: perspective(400px) rotateX(10deg);
+		-ms-transform: perspective(400px) rotateX(10deg);
+		transform: perspective(400px) rotateX(10deg)
+	}
+
+	100% {
+		-webkit-transform: perspective(400px) rotateX(0);
+		-ms-transform: perspective(400px) rotateX(0);
+		transform: perspective(400px) rotateX(0);
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px)
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+		-ms-transform: translateY(-20px);
+		transform: translateY(-20px)
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+
+
+</style><style>html, * {-webkit-user-select:text!important; -moz-user-select:text!important;}</style></head>
+
+
+<body>
+<div class="search_part">
+
+<p><img class="icon_guge" src="./index_files/guge.gif"></p>
+
+<form onsubmit="return search()" class="search_bar">
+<input type="submit" id="search_submit" value="搜索">
+<span><input class="search" type="text" value="" autocomplete="off" id="search_input" placeholder="✎...搜点什么好呢？"></span>
+<ul id="suglist"></ul>
+</form>
+</div>
+<br>
+
+
+<div id="content">
+
+<div class="box">
+<a href="http://www.huya.com/"></a>
+<p><img class="icon" src="./index_files/huya.png"></p>
+<p class="url">虎牙直播</p>
+</div>
+
+
+
+<div class="box">
+<a href="http://www.kankanwu.com/"></a>
+<p><img class="icon" src="./index_files/shiping.png"></p>
+<p class="url">看看屋</p>
+</div>
+
+
+
+
+<div class="box">
+<a href="http://v.laod.cn/"></a>
+<p><img class="icon" src="./index_files/VIP.png"></p>
+<p class="url">视频解析</p>
+</div>
+
+
+
+
+<div class="box">
+<a href="http://tieba.baidu.com/?page=like"></a>
+<p><img class="icon" src="./index_files/tieba.png"></p>
+<p class="url">百度贴吧</p>
+</div>
+
+
+
+
+<div class="box">
+<a href="http://taobao.com/"></a>
+<p><img class="icon" src="./index_files/taobao.png"></p>
+<p class="url">淘宝</p>
+</div>
+
+
+
+
+<div class="box">
+<a href="http://music.163.com/#"></a>
+<p><img class="icon" src="./index_files/wangyiyun.png"></p>
+<p class="url">网易云</p>
+</div>
+
+
+
+<!--
+如若要添加可复制一段
+<div class="box">
+<a href="地址"></a>
+<p><img class="icon" src="img/icon6.png" ></p>
+<p class="url">书签名称</p>
+</div>
+
+
+
+
+
+其中链接在href中如href="地址"建议填写folder://自己创建的文件夹地址，这样创建一次不必再修改
+图标文件放置在img文件夹中定义如src="img/icon6.png"
+显示的标题在<p class="url">书签名称</p>之间定义如<p class="url">酷安</p>
+下方window.location.href =主页搜索引擎地址，目前为自用Pc版百度内部搜索，加上浏览器的顶部搜索即为双搜索，使用更方便
+
+-->
+
+</div>
+
+<div id="app-items">
+<div class="title">
+    
+<script type="text/javascript" src="https://api.imjad.cn/hitokoto/?encode=js&amp;charset=utf-8"></script>
+<script>hitokoto()</script>
+
+</div>
+<br>
+
+
+
+<div class="box">
+<a href="http://www.1ppt.com/"></a>
+<p><img class="icon" src="./index_files/PPT.png"></p>
+<p class="url">第一PPT</p>
+</div>
+
+
+<div class="box">
+<a href="https://pan.baidu.com/disk/home?errno=0&amp;errmsg=Auth%20Login%20Sucess&amp;&amp;bduss=&amp;ssnerror=0#list/path=%2F&amp;vmode=list"></a>
+<p><img class="icon" src="./index_files/baiduyun.png"></p>
+<p class="url">百度网盘</p>
+</div>
+
+
+<div class="box">
+<a href="https://mail.qq.com/cgi-bin/frame_html?f=html&amp;sid=5bBot5WhiYQ_KSJ7W8jT5vNw"></a>
+<p><img class="icon" src="./index_files/qqyouxiang.png"></p>
+<p class="url">QQ邮箱</p>
+</div>
+
+
+<div class="box">
+<a href="http://fanyi.youdao.com/"></a>
+<p><img class="icon" src="./index_files/youdao.png"></p>
+<p class="url">有道翻译</p>
+</div>
+
+
+
+<br>
+
+
+<div class="box">
+<a href="http://www.w3school.com.cn/tiy/t.asp?f=html_basic"></a>
+<p><img class="icon" src="./index_files/HTML.png"></p>
+<p class="url">HTML在线</p>
+</div>
+
+
+
+
+<div class="box">
+<a href="http:echooit.com/blog/"></a>
+<p><img class="icon" src="./index_files/echooit.png"></p>
+<p class="url">乐回享</p>
+</div>
+
+
+
+<div class="box">
+<a href="http://shillber.byethost13.com/"></a>
+<p><img class="icon" src="./index_files/wodewangzhang.png"></p>
+<p class="url">Shillber</p>
+</div>
+
+
+<div class="shuxing"> 
+  <script type="text/javascript" src="http://open.iciba.com/ds_open.php?id=54055&name=%E4%BF%9D%E5%BE%B7%E5%9C%A8%E7%BA%BF&auth=226994D1666A2E1E3E3D71C79CA27C72" charset="utf-8"></script> 
+</div>
+
+
+</div>
+
+<script type="text/javascript">function search(){if(a=$("#search_input").val()){window.location.href = "https://www.baidu.com/s?wd=" + a;$("#search_input").val("");}return false;}
+
+$('.search').on('keyup focus',function(){getdata($(this).val())}).blur(function(){if($(this).val()){$('#suglist').click(function(e){a=$(e.target),b=a.closest('li').text(),$('.search').val(b),a.is('b')?$('.search').focus():search()})}})
+
+function getdata(a){a?$.ajax({url:'http://suggestion.baidu.com/su',type:'GET',dataType:'jsonp',data:{wd:a,cb:'su'}}):su({s:[]})}
+function su(a){for(var b=a.s,c='',d=$('#suglist'),e=f=b.length,g=d.find('li').length;e>0;e--)c+='<li>'+b[e-1]+'<b></b></li>';d.stop().html(f>g?c:d.html()).animate({'height':(d.find('li').height()*1.4+5)*f+5},f?30*Math.abs(g-f):60,function(){d.html(c)})}
+
+
+</script>
+
+
+<script type="text/javascript" src="http://yiju.ml/api/word.php?m=js"></script>
+<script type="text/javascript">
+var s = false; //显示来源信息，true为显示，false为不显示，默认不显示
+$("title").html(str[0]+(s?str[1]:''))
+</script>
+
+
+
+</div></body></html>

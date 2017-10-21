@@ -1,0 +1,1 @@
+var str="织锦相思楼影下，钿钗暗约小帘间。——吴文英《新雁过妆楼·中秋后一夕李方庵月庭延客命小妓过新水令坐间赋词》".split("——");function yiju(s){if(s){document.write(str[0]+"——"+str[1]);}else{document.write(str[0]);}}

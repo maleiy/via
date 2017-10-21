@@ -1,0 +1,1 @@
+function hitokoto(){document.write("<span class='hitokoto' title='分类：收藏 出自：银魂 投稿：_10年后的8月 @ 2015.07.06 16:07:14'>要是喜欢一个人,就要连那个人脏的地方一起喜欢。</span>");}
