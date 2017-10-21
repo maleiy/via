@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="title">  
+</title>
+<script type="text/javascript">
+var d = new Date()
+var time = d.getHours()
+if (time < 24)
+{
+document.getElementById("title").innerHTML="Good evening";
+}
+if (time < 19) 
+{
+document.getElementById("title").innerHTML="Good afternoon";
+}
+if (time < 12) 
+{
+document.getElementById("title").innerHTML="Good morning";
+}
+if (time < 5)
+{
+document.getElementById("title").innerHTML="Dalao hello";
+}
+</script>
+</head>
+<style>
+*{padding:0;margin:0;}
+body{text-align:center;background-image:url('img/bg.png') !important;background-size:100% !important;background-repeat:no-repeat;}
+#search_input {height:1.8em;line-height:1.8em;width:92%;outline:none;border:none;font-size:1.0em;text-align:center;background:#eee;border-radius:15px;color:#666;padding-left:4%;padding-right:4%;}
+#search_input:focus {text-align:left;}
+.search_bar {display:table; vertical-align:middle;width:80%;height:1.0em;background:transparent;text-align:center;margin-left:10%;margin-right:10%;position:fixed;bottom:10px;}
+#content {width:100%;text-align:center;padding-top:15px;padding-bottom:15px;}
+#wushan{width:100%;max-width:400px;margin:150px auto;text-align:center;background-color:#00000000;padding-top:0px;padding-bottom:15px;}
+#yiju{width:100%;max-width:400px;margin:0px auto;text-align:center;background-color:#00000000;padding-top:0px;padding-bottom:15px;}
+.huaji{font-size:12px;height:30px;line-height:20px;padding:0 10px 0 20px;}
+#zuoyouming{width:100%;max-width:400px;margin:50px auto;text-align:center;background-color:#00000000;padding-top:0px;padding-bottom:15px;}
+.tz{background-color:#00000000;font-size:16px;height:30px;line-height:30px;padding:0 10px 0 20px;}
+</style>
+<div id="wushan">
+</div>
+<br />
+<div id="yiju">
+<div class="huaji"><script type="text/javascript" src="http://yiju.ml/api/word.php?m=js"></script><script>document.write("<div style=\"text-align:center\">"+str[0]+"</div><div style=\"text-align:right\">——"+str[1]+"</div>");</script>
+</div>
+<br />
+<div id="zuoyouming">
+<div class="tz">
+<strong>An apple a day, keeps the doctor aways</strong>
+<!--
+提示
+<strong>这里可修改成自己的座右铭</strong>
+-->
+</div>
+<br />
+<body>
+<form onsubmit="return search()" class="search_bar">
+<span><input type="text" value="" placeholder="搜索点什么..." autocomplete="off" id="search_input" ></span>
+</form>
+<div id="content">
+</div>
+<script type="text/javascript">function search(){if(document.getElementById("search_input").value != ""){window.location.href = "https://m.baidu.com/s?from=1011440l&word=" + document.getElementById("search_input").value;document.getElementById("search_input").value = "";}return false;}</script>
+<!--
+提示
+window.location.href = "这里可以替换搜索引擎"
+如谷歌_window.location.href = "https://www.google.com.hk/search?newwindow=1&q="
+默认度娘
+-->
+</body>
+</html>
