@@ -1,0 +1,145 @@
+#weatherAJAX
+{ clear: both; }
+
+#tp-weather-widget
+{
+	padding: 1px;
+	margin: 0;
+	position: relative;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 12px;
+	line-height: 100%;
+}
+
+#tp-weather-widget .weatherTitle
+{
+    padding: 2px;
+    padding-left: 0px;
+}
+
+#tp-weather-widget .header
+{
+	border-bottom: dotted 1px #999999;
+	padding: 3px 5px 5px 5px;
+	color: #4372b0;
+	position: relative;
+}
+
+#tp-weather-widget #divAD
+{
+    position:absolute;
+    padding: 5px;
+    width: 130px;
+    top: 5px;
+    left: 50%;
+    margin-left: -65px;
+    z-index:1999;
+    text-align: center;
+    display:none;
+    background-color: #03a9f4;
+    color: #fff;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#divAD #title
+{
+    float: left;
+    width: 55px;
+    line-height: 150%;
+    margin: 15px 0;
+    text-align: center;
+}
+
+#divAD #qr
+{
+    float: right;
+    width: 70px;
+    height: 70px;
+}
+
+#tp-weather-widget .selector
+{
+    width: 180px;
+    height: 20px;
+    padding: 5px 0 0 0;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#tp-weather-widget .info
+{
+    padding: 5px 0;
+}
+
+#tp-weather-widget #divShareLink
+{
+    position:absolute; margin-left:5px;
+}
+
+#tp-weather-widget #divShareButtons
+{
+    display:none; position:absolute; margin-left:5px; margin-top:-2px;
+}
+
+#tp-weather-widget a, a:hover
+{
+	text-decoration: none;
+}
+
+#tp-weather-widget .currentIcon
+{
+    margin: 5px;
+    border: none;
+}
+
+#tp-weather-widget .forecastIcon
+{
+    margin: 5px;
+    border: none;
+}
+
+#tp-weather-widget .forecastDay, .cityName
+{
+    font-weight: bold;
+    line-height: 14px; /*Fix for IE7*/
+}
+
+#tp-weather-widget #loading
+{
+    position: absolute;
+    right: 5px;
+    top: 1px;
+    display: none;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 3px 4px;
+    z-index: 100;
+}
+
+#tp-weather-widget .implicitSelect
+{
+    position: absolute;
+    width: 180px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    margin-left: -90px;
+    margin-top: -25px;
+    z-index: 9999;
+    display: none;
+}
+
+#tp-weather-widget #btnConfirm
+{
+    clear: both;
+    float: left;
+    margin: 5px 0 0 60px;
+    display:none;
+}

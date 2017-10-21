@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0136)http://www.thinkpage.cn/weather/weather.aspx?uid=U5D9ADCCD9&cid=CHBJ000000&l=&p=SMART&a=1&u=C&s=1&m=2&x=1&d=0&fc=&bgc=&bc=&ti=0&in=0&li= -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./widget.css"><link id="linkCSS" rel="stylesheet" type="text/css" href="./1.css"><title>
+	ThinkPage Weather
+</title><meta http-equiv="refresh" content="1800">
+    <script src="./hm.js"></script><script type="text/javascript">
+        /* ThinkPage Weather */
+        thinkpage_weather_req = {"User":"U5D9ADCCD9","City":null,"CityId":"CHBJ000000","CityName":"","Language":"zh-CHS","Provider":"SMART","AQIStatus":1,"APIVersion":0,"AutoCity":true,"Unit":"C","Skin":"1","FontColor":"#000000","BackgroundColor":"transparent","BorderColor":"none","DisplayCitySelect":2,"DisplayCurrent":true,"ForecastDays":0,"DisplayTitle":false,"DisplayInfo":false,"LinksType":2,"Type":"iframe","Source":null,"Suggestion":2};
+        thinkpage_weather_res = null;
+        thinkpage_weather_vip = true;
+        thinkpage_weather_source = "";
+        /* Baidu */
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?317d1e4c0df1ea09912e5f05c5999d7f";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<style>html, * {-webkit-user-select:text!important; -moz-user-select:text!important;}</style></head>
+<body>
+    <div id="weatherAJAX">
+<style type="text/css">
+    a, a:hover, a:visited {color:#000000;}
+</style>
+<div id="tp-weather-widget" style="color:#000000; background-color:transparent; border:none; zoom:1;">
+    <div id="divOverlay" style="position:absolute; left:0; top:0; width:100%; height:1000px; background-color:#fff; z-index:3999; display:none;"></div>
+    <div id="loading" class="corner-all" style="display: none;">读取中</div>
+    
+<div id="divAD" class="clearfix">
+
+</div>
+    
+    <div id="divSelector" class="selector implicitSelect" style="display:none;">
+    <form method="post" action="http://www.thinkpage.cn/weather/weather.aspx" id="form1" onsubmit="return false;">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWBgIED2QWCAIFDw8WAh4EVGV4dAU3PHNwYW4gY2xhc3M9J3RlbXAnPjwvc3Bhbj7CsDxzcGFuIGNsYXNzPSd1bml0Jz5DPC9zcGFuPmRkAgcPDxYCHwAFHjxzcGFuIGNsYXNzPSd2YWx1ZSc+PC9zcGFuPue6p2RkAgkPDxYCHwAFI+a5v+W6piA8c3BhbiBjbGFzcz0ndmFsdWUnPjwvc3Bhbj4lZGQCCw8PFgIfAAU+PHNwYW4gY2xhc3M9J2Fpci1xdWFsaXR5LXZhbHVlJyBpZD0nYWlyLXF1YWxpdHktbGV2ZWwnPjwvc3Bhbj5kZAIFDxYCHgdWaXNpYmxlaGQCBg8PFgIfAWhkFgICAQ9kFgICAQ8WAh8ABSTmm7TmlrDkuo4gPHNwYW4gaWQ9J2x0bFRpbWUnPjwvc3Bhbj5kZMJkj6M3Esu+nurH07OP1iZOj39m">
+</div>
+
+    <script type="text/javascript">
+        var tp_weather_widget_search_tip = '搜索城市中文或拼音';
+        var forceImplicitSelector = false;
+    </script>
+    <div id="btnToggle" style="cursor:pointer; float:left; margin:2px 3px 0 0;"><div class="icon icon_search"></div></div>
+    <div id="divSelectCity" style="float:left;">
+        <select name="ctl00$WeatherSelector$ddlL1" id="ddlL1" onchange="ThinkPage.Weather.API.GetChildLocations(this.value, 2, ThinkPage.Weather.Widget.onGetChildLocations)" style="width:50px;">
+	<option selected="selected" value="AA">直辖市</option>
+	<option value="XX">特别行政区</option>
+	<option value="TW">台湾</option>
+	<option value="HL">黑龙江</option>
+	<option value="JL">吉林</option>
+	<option value="LN">辽宁</option>
+	<option value="NM">内蒙古</option>
+	<option value="HE">河北</option>
+	<option value="HA">河南</option>
+	<option value="SX">山西</option>
+	<option value="SD">山东</option>
+	<option value="JS">江苏</option>
+	<option value="ZJ">浙江</option>
+	<option value="FJ">福建</option>
+	<option value="JX">江西</option>
+	<option value="AH">安徽</option>
+	<option value="HB">湖北</option>
+	<option value="HN">湖南</option>
+	<option value="GD">广东</option>
+	<option value="GX">广西</option>
+	<option value="HI">海南</option>
+	<option value="GZ">贵州</option>
+	<option value="YN">云南</option>
+	<option value="SC">四川</option>
+	<option value="XZ">西藏</option>
+	<option value="SN">陕西</option>
+	<option value="NX">宁夏</option>
+	<option value="GS">甘肃</option>
+	<option value="QH">青海</option>
+	<option value="XJ">新疆</option>
+	<option value="AS">亚洲</option>
+	<option value="EU">欧洲</option>
+	<option value="NA">北美洲</option>
+	<option value="SA">南美洲</option>
+	<option value="AF">非洲</option>
+	<option value="OC">大洋洲</option>
+
+</select>
+        <select name="ctl00$WeatherSelector$ddlL2" id="ddlL2" onchange="ThinkPage.Weather.API.GetChildLocations(this.value, 3, ThinkPage.Weather.Widget.onGetChildLocations)" style="width:50px;">
+	<option selected="selected" value="BJ">北京</option>
+	<option value="SH">上海</option>
+	<option value="TJ">天津</option>
+	<option value="CQ">重庆</option>
+
+</select>
+        <select name="ctl00$WeatherSelector$ddlL3" id="ddlL3" onchange="ThinkPage.Weather.API.GetWeather(this.value, ThinkPage.Weather.Widget.Render)" style="width:50px;">
+	<option selected="selected" value="CHBJ000000">北京</option>
+	<option value="CHBJ000100">海淀</option>
+	<option value="CHBJ000200">朝阳</option>
+	<option value="CHBJ000300">顺义</option>
+	<option value="CHBJ000400">怀柔</option>
+	<option value="CHBJ000500">通州</option>
+	<option value="CHBJ000600">昌平</option>
+	<option value="CHBJ000700">延庆</option>
+	<option value="CHBJ000800">丰台</option>
+	<option value="CHBJ000900">石景山</option>
+	<option value="CHBJ001000">大兴</option>
+	<option value="CHBJ001100">房山</option>
+	<option value="CHBJ001200">密云</option>
+	<option value="CHBJ001300">门头沟</option>
+	<option value="CHBJ001400">平谷</option>
+
+</select>
+    </div>
+    <div id="divSearchCity" style="float:left; display:none;">
+        <input id="txtSearch" type="text" style="width:148px; color:#C6C6C6;" value="搜索城市中文或拼音">
+    </div>
+    <input id="btnConfirm" type="button" title="确定" value="确定" style="display: inline-block;">
+    
+    
+    
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C21772F6">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdADjdynClyWGjpuKKrvB0IhQXMPMkVVdb5j6iSAV0U3Mk8WMILHC6vvvnMx7hcOBl+HP5cievPOHp6a2pTHaGCbGHEnU+L+ulU7jYSmxfai82Iy0VNbKF1NBlZCCZPK524an+d72WmLjncUnLa5yfs7k5YfgRXj/6hEcTV+MDToZ0VVP9wLzzNC3yoSrjGB9fjwv0RWfswhayLgzSKtdqRTG1PNv+3tF/8PZu3Lo6Mkzl1f5VQX/h9TUJf3K+H/wnlfZfAz9VWCbZrSCTuu+jhRpuHD5dj1Q5EGXJYDGoFl1R77kero6aVcOg4uSt7FHzYC8uqtDAMmrC5f2X0dMNlJaSAsHenZ8Y2lxJ+pW/mYYAntuTN6FeATgmDkr04F9JloNNowK40TcKdYysaZVhMvigbAUoPHd83hv0z68KoAPqZzK2fSi64q/cvWvWPBFKwulKrdC44WE+Aqxp67zFYKW/FICZ1TOLQa0qiMrk4S+Zfe8ylW2/8E4aRsfBvc1Mfck+TIVR0KInBadesIgFvqxOTwpoPDUUwZVa5YRyEwA9E3tz13DjqiivasHMjgQHcfmeiyPEdY8BARSDuYx/veYQVFRUaRYEMha+Bu2shd2unZYoBD48RkkTTAj8zckooIX7hsrIDD8FmghgDeMZ3skft3qfvX37Q2z9dWsXXmYQFBjuFKG+jKO3kpPf4cbQjQCz3L5Smh5SMI33buRuNhmKeZPDy75n8gBYZ7e1//8anOmA0dNKhNG2gFuLLU4LaXsAjuShi3NBWzyJUX23MTWWUzzdu/0bxKSEXA6K1RUxUlG9X4Pk1ggaWB5FYFg73oxwHH74H6ClN+Xis+nfYM7me5yvwXsc5nIQRXCZltfDV01rKZvj7bCURG732fFmbRKqxFNcRbcsbza1GL71f5VwctwiZOGqy26tgy3D25Kq3TNTM5q0/+NB1NtaHkgeQerB6KgFE3w8zdfx2qrfXKAJm0oBhc0Lf5XOo/f9yH6cOJnbTtRAzkWkJ7vy1hvpreRqihEYkVJRWendgIS7Hppo+5awloSiVC4Ljq/fDyhWapkanuLixQ3tdOxanQXfuqU385B0ALGUuduxwHu4PnldSwDayvFxnp5huR1Q5a2TU8PMHq+kEl8nkAyPJdQrrtZ2lNwP2aOPyHRTbtPLnDc3T8dP1fr8oUxGEsSbHlmOJJ8XW+E3SQZ5wsvMLRDBbesSSCAU">
+</div></form>
+</div>
+    <div id="divCurrentWeather" class="clearfix linkBody" style="padding: 5px 0px; border-bottom: 1px dotted rgb(153, 153, 153); cursor: pointer;">
+        <div style="width:50%; float:left; text-align:center;">
+            <img id="changeCity" src="./select.gif"><a class="linkCity" href="http://www.thinkpage.cn/weather/city/WM6N2PM3WY2K" target="_blank"><span id="ltlCity" class="cityName">成都</span></a><br>
+            <a class="linkCity" href="http://www.thinkpage.cn/weather/city/WM6N2PM3WY2K" target="_blank"><img class="weatherIcon currentIcon" src="./13.png" style="width:40px;height:40px;" title="" alt=""></a><br>
+            <span id="ltlText">小雨</span>
+        </div>
+        <div style="float:left; line-height: 20px; text-align: left; margin-left:5px;">
+            <span id="ltlTemperature"><span class="temp" style="cursor: pointer;">16</span>°<span class="unit">C</span></span><br>
+            <span id="ltlSpeed" title="3.24km/h"><span class="value">西南风1</span>级</span><br>
+            <span id="ltlHumidity">湿度 <span class="value">99</span>%</span><br>
+            <span id="ltlAirQuality"><span class="air-quality-value aqi-level-0" id="air-quality-level">空气优</span></span>
+        </div>
+    </div>
+    
+    
+    <span id="cip" style="display:none">//image.thinkpage.cn/weather/images/icons/neo_100/{CODE}.png</span>
+    <span id="fip" style="display:none">//image.thinkpage.cn/weather/images/icons/neo_100/{CODE}.png</span>
+    
+</div></div>
+    <script type="text/javascript" src="./jquery-1.8.3.min.js"></script>
+    <script src="./widget.js" type="text/javascript"></script>
+
+</body></html>

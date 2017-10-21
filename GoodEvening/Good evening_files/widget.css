@@ -1,0 +1,140 @@
+body, p, li, input, h1, h2, h3, td, select, textarea, div {
+    font-family: Tahoma;
+    font-size: 12px;
+}
+
+body {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#tp-weather-widget #changeCity {
+    vertical-align: middle;
+    margin: 0 3px;
+    font-weight: normal;
+    cursor: pointer;
+    color: #999;
+}
+
+/* Clear Fix */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* Hide from IE Mac */
+.clearfix {
+    display: block;
+}
+/* End hide from IE Mac */
+/* end of clearfix */
+
+.weatherIcon {
+    _behavior: url(/js/iepngfix/iepngfix.htc);
+}
+
+.icon {
+    background: url('/weather/images/icons.gif');
+    background-repeat: no-repeat;
+}
+
+.icon_search {
+    width: 15px;
+    height: 15px;
+    background-position: left 0;
+}
+
+.icon_more {
+    width: 12px;
+    height: 12px;
+    background-position: left -20px;
+}
+
+.icon_info {
+    width: 16px;
+    height: 16px;
+    background-position: left -40px;
+    margin: -2px 0;
+}
+
+.corner-all {
+    -moz-border-radius: 3px /*{cornerRadius}*/;
+    -webkit-border-radius: 3px /*{cornerRadius}*/;
+    border-radius: 3px /*{cornerRadius}*/;
+}
+
+.zfix {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    border: none;
+}
+
+.air-quality-value {
+    padding: 1px 4px 2px 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    border-radius: 3px;
+    border-width: 0;
+    border-style: solid;
+}
+
+.aqi-level-0 {
+    color: #fff;
+    background-color: #00e400;
+    /*background-image: linear-gradient(to top, #01c701, #00e400);*/
+    border-color: #01c701;
+    border-width: 1px;
+}
+
+.aqi-level-1 {
+    color: #000;
+    background-color: #ffff00;
+    /*background-image: linear-gradient(to top, #e0e000, #ffff00);*/
+    border-color: #e0e000;
+    border-width: 1px;
+}
+
+.aqi-level-2 {
+    color: #fff;
+    background-color: #ff7e00;
+    /*background-image: linear-gradient(to top, #e47100, #ff7e00);*/
+    border-color: #e47100;
+    border-width: 1px;
+}
+
+.aqi-level-3 {
+    color: #fff;
+    background-color: #ff0000;
+    /*background-image: linear-gradient(to top, #df0101, #ff0000);*/
+    border-color: #df0101;
+    border-width: 1px;
+}
+
+.aqi-level-4 {
+    color: #fff;
+    background-color: #99004c;
+    /*background-image: linear-gradient(to top, #7e013f, #99004c);*/
+    border-color: #7e013f;
+    border-width: 1px;
+}
+
+.aqi-level-5 {
+    color: #fff;
+    background-color: #7e0023;
+    /*background-image: linear-gradient(to top, #66001c, #7e0023);*/
+    border-color: #66001c;
+    border-width: 1px;
+}
