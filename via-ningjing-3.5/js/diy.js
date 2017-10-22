@@ -4,7 +4,7 @@ setInterval('n=new Date,h=n.getHours(),m=n.getMinutes(),s=n.getSeconds(),T&&$("#
 var L=localStorage;
 if(L.use||L.userdata)bak=L.use?L.bok:L.bookmark,L.clear(),L.bok=bak
 if(!L.mnu||JSON.parse(L.mnu)[0][1]<3.5)L.setItem('mnu',JSON.stringify([["dta",3.5],["logo","时间",1,1,"#44bbff","#44ffbb",36,0,120,"Google","logo/google.png","<p style='font-size:40px'><b style='color:#48f'>G</b><b style='color:#e43'>o</b><b style='color:#fb0'>o</b><b style='color:#48f'>g</b><b style='color:#3a5'>l</b><b style='color:#e43'>e</b></p>"],["bg",1,"#001443","img/back.gif",270,1],["bar",400,300,"What","Go","https://www.baidu.com/s?wd="],["book",0,"#000000",5]]))
-if(!L.bok||L.bok=='[]')L.setItem('bok',JSON.stringify([["百度","https://m.baidu.com/?pu=sz%401321_480","img/baidu.png"],["谷歌","https://www.google.com.hk/?gws_rd=ssl","img/google.png"],["酷安","https://www.coolapk.com/","img/cool.png"],["乐回享","http://echooit.com/blog/","img/echooit.png"]]))
+if(!L.bok||L.bok=='[]')L.setItem('bok',JSON.stringify([["百度","https://m.baidu.com/?pu=sz%401321_480","img/baidu.png"],["谷歌","https://www.google.com.hk/?gws_rd=ssl","img/google.png"],["酷安","https://www.coolapk.com/","img/cool.png"],["乐回享","http://echooit.com/blog/","img/echooit.png"],["more","http://leftshine.gitee.io/viaindex/","img/more.png"]]))
 var B=JSON.parse(L.bok),C=JSON.parse(L.mnu),D=E=F=T=1
 for(var a='',b=0;b<B.length;b++)a+='<li><div class="sc"></div><div class="bq" style="background-image:url('+B[b][2]+')" msg="'+B[b][1]+'"></div><p>'+B[b][0]+'</p></li>'
 $('#book').html(a+'<li class="mark"><div class="tj" style="background-image:url(img/mark.png)"></div><p>添加书签</p></li>'),style(0)

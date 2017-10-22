@@ -6,7 +6,6 @@ if(!localStorage.getItem("first"))
     $.post("http://www.liumingye.cn/tools/via/log.php?s=activate via-quark-homepage "+navigator.userAgent);//激活统计
     alert("感谢您的使用本主页，本页面书签和设置基于网页存储，请勿清除缓存里的网页存储。");
 }
-
 var Storage,html="";
 Storage.book=JSON.parse(localStorage.getItem('book'));
 for(var i=0;i<Storage.book.length;i++){
@@ -160,6 +159,8 @@ $(function() {
     '                <a href="https://developer.mozilla.org/zh-CN"><img src="img/mozilla.png"><p>Mozilla</p><p>学习web开发的最佳实践</p></a>'+
     '                <a href="http://m.open.163.com"><img src="img/open163.png"><p>网易公开课</p><p>人chou就要多学习</p></a>'+
     '                <a href="https://shimo.im"><img src="img/shimo.png"><p>石墨文档</p><p>可多人实时协作的云端文档</p></a>'+
+	'                <a href="http://leftshine.gitee.io/viaindex/"><img src="img/more.png"><p>主页收集</p><p>收集via浏览器定制主页</p></a>'+
+	
     '        </li>'+
     '      </ul>'+
     '    </div>'+
