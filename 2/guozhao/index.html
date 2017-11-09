@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--原创动力-->
+<!-- by WQY916 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<link rel="stylesheet" href="css/b.css"/>
+<title></title>
+<link rel="shortcut icon" href="favicon.ico" />
+</head>
+<style></style>
+<body>
+
+<div class="lgo" id="lgo"></div>
+<form id="menu">
+  <div id="menus">
+<p>点击切换logo样式: <o class="logo"></o></p>
+<div id="logof">
+<input class="logof" type="text" placeholder="设置自定义文字" m>
+<p>设置字体颜色: <o class="fontc"></o><input id="fontc0" type="color" s><input id="fontc1" type="color" s></p>
+<p>设置字体大小: <input id="fonts" type="text" onkeyup="num(this,2,0)" s>px</p>
+<p class="timeb">是否开启暗显: <o></o></p>
+</div>
+<div id="logop">
+<p><input class="logop" placeholder="选择自定义logo文件" readonly p><input class="logop" type="text" placeholder="输入自定义logo路径" p><input type="file" id="pfile" accept="image/*" style="display:none"><o class="set"></o></p>
+<p>设置图片圆角: <input id="logor" type="text" onkeyup="num(this,2,1)" s>px</p>
+<p>设置图片宽度: <input id="logos" type="text" onkeyup="num(this,3,0)" s>px</p>
+</div>
+<textarea id="logod" style="height:50px" placeholder="写入自定义logo代码(html格式)"></textarea><hr/>
+<div id="back">
+<p>点击切换背景样式: <o class="back"></o></p>
+<p>点击切换页内刷新显隐性: <o class="qh"></o></p>
+<p><input class="backp" placeholder="选择自定义背景文件" readonly p><input class="backp" type="text" placeholder="输入自定义背景路径" p><input type="file" id="bfile" accept="image/*" style="display:none"><o class="set"></o></p>
+<p>设置背景图片高度: <input type="text" id="backs" maxlength="4" onkeyup="num(this,9,1)" s>px</p>
+<p>设置背景颜色: <input class="backc" type="color" s><input class="backc" type="text" onkeyup="num(this,16,1)" style="width:5em"></p>
+</div><hr/>
+<p>搜索框焦点获取时高度: <input type="text" id="barh" onkeyup="num(this,3,1)" s>px</p>
+<p>搜索建议延时加载时长: <input type="text" id="bart" onkeyup="num(this,4,1)" s>ms</p>
+<p>搜索输入框占位符:</p>
+<p><input type="text" id="barp" m></p>
+<p>搜索提交按键占位符:</p>
+<p><input type="text" id="bars" m></p><hr/>
+<p>设置书签单行个数: <input id="bookn" type="text" onkeyup="num(this,1,0)" s></p>
+<p>设置书签标题颜色: <input id="bookc" type="color" s></p>
+<p>设置书签图标圆角: <input id="bookr" type="text" onkeyup="num(this,2,1)" s>px</p>
+<div id="about"><hr/>
+<p>by <o>WQY916</o></p>
+<p>and QQ: <o style="-webkit-user-select:text">3332802823</o></p>
+<p>版本号: <o class="dta"></o></p>
+<o id="wqy">--- 原创动力 ---</o>
+<div class="wqy">
+<p>是否恢复默认设置?(不包括书签)<div class="btn wyes">确定</div><div class="btn wno">取消</div></p>
+</div></div></div><hr/>
+<div id="menuo">
+<div class="btn about">关于</div><div class="btn myes">保存</div><div class="btn mno">取消</div>
+</div></form>
+
+<ul id="engine">
+<li msg="https://www.google.com.hk/search?q=">谷歌</li>
+<li msg="https://www.baidu.com/s?wd=">百度</li>
+<li msg="http://m.sm.cn/s?q=">神马</li>
+<li msg="http://cn.bing.com/search?q=">必应</li>
+<li msg="https://www.so.com/s?q=">好搜</li>
+<li msg="https://www.sogou.com/web?query=">搜狗</li>
+</ul>
+
+<form id="bar">
+<ul id="suglist"></ul>
+<input type="submit" id="submit"><div><o id="clear"></o></div><div><o id="close"></o></div>
+<span><input type="text" id="input" autocomplete="off"></span>
+</form>
+
+<ul id="book"></ul>
+
+<div id="bookmark">
+<div id="show">
+<div class="bbox"><p style="font-size:12px"></p>
+<img class="bicon">
+<p class="btext"></p>
+</div>
+</div>
+<form id="mark">
+<input class="ktext" type="text" placeholder="标题">
+<input class="khttp" type="text" placeholder="网址">
+<input class="kicon" placeholder="请选择图片文件" readonly p>
+<input class="kicon" type="text" placeholder="请输入图片路径" p>
+<input type="file" id="xfile" accept="image/*" style="display:none"><o class="set" style="top:8px"></o>
+<div class="btn byes">确定</div><div class="btn bno">取消</div>
+</form>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/diy.js"></script>
+
+<!--
+</body>
+--!>
+</body>
+</html>
