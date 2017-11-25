@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="zh-CN" http-equiv="Content-Language" />
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+		<title>主页</title>
+		<style>
+			*{padding:0;margin:0;box-sizing:border-box}
+			html{-webkit-tap-highlight-color:transparent;height:100%;min-height:100%}
+			body{min-height:100%;background-color:#FFF;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;max-width:100%;width:600px;margin:auto;text-align:center}
+			#search_input{height:42px;width:95%;outline:0;border:none;font-size:15px;background-color:transparent;color:#6C6C6C}
+			.search_part{margin-bottom:20px}
+			span{display:block;overflow:hidden;padding-left:5px;vertical-align:middle}
+			.box a{width:100%;height:100%;position:absolute;left:0;top:0}
+			.hint{color:#8C8C8C;font-size:15px;word-wrap:break-word;overflow:auto;padding:50px 5px;text-align:center;margin:auto}
+			.bookmark_part{margin:0 6%;padding:10px 0}
+			.frosted-glass{background-color:rgba(0,0,0,0);position:fixed;left:0;top:0;width:100%;height:100%;z-index:-999}
+			.logo{font-size:28px;white-space:normal;word-wrap:break-word;text-decoration:none;color:#6C6C6C}
+			.search.icon{color:#666;width:12px;height:12px;border:solid 2px currentColor;border-radius:100%;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);text-align:center;margin:auto}
+			.search.icon:before{content:'';position:absolute;top:10px;left:3px;height:5px;width:2px;background-color:currentColor}
+			img.smaller{width:160px;max-width:86px;border-radius:50%;min-width:160px;height:160px;min-height:160px;object-fit:cover;max-height:50%}
+			#content{position:absolute;top:5%;max-width:600px;width:100%}
+			.search_bar{display:table;vertical-align:middle;width:90%;height:42px;max-width:600px;margin:0 auto;margin-top:15px;border:1px solid rgba(0,0,0,.1);border-radius:100px;background:#fff;box-shadow:0 0 2px rgba(255,255,255,.6)}
+			#search_input{color:#6c6c6c}
+			#search_submit{display:none;outline:0;height:42px;width:42px;float:right;color:#666;font-size:15px;font-weight:700;border:none;background-color:transparent;padding:0 10px 0 10px}
+			.box{position:relative;display:inline-block;width:75px;border:0}
+			.title{border-radius:100%;color:#fff;width:3.4em;line-height:3.4em;height:3.4em;font-size:15px;white-space:nowrap;overflow:hidden;margin:auto;text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis}
+			.url{padding:6px 0 4px;width:72px;color:#8C8C8C;font-size:11px;white-space:nowrap;overflow:hidden;margin:auto;text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis}
+			.bookmark_part{width:90%;max-width:600px;background-color:transparent;margin:0 auto;padding:0;border-radius:0}
+		</style>
+    <script src="./jquery.min.js"></script>
+		<script language="javascript">
+			var num = '6';//默认为 6 分钟抓取一次接口，查询最新地球图片（地球图片每10分钟左右更新一次），不建议改成低于 6 分钟抓取一次
+      window.onload = get_pic();
+			window.setInterval(function(){
+				get_pic();
+			}, 1000*60*num);
+			function get_pic(){
+				var unixtime = new Date().getTime();
+				$.ajax({
+					url: "http://api.nowtime.cc/himawari8-image?unixtime=" +unixtime,//如果你的网站是 https ，请将本接口的 http 改成 https
+					type: "GET",
+					//cache: false,
+					dataType: 'json',
+					success: function(data) {
+						if(data.code == 200){
+							console.log('图片获取成功！\n');
+							/**biu biu biu biu*/
+							var rule = 'img[id=earth_image]';
+							/**biu biu biu biu*/
+              $(rule).replaceWith('<img id="earth_image" class="smaller" src="'+data.image_url+'" />');
+
+						}else{
+							console.log('图片获取失败！\n');
+						}
+					},
+					error: function() {
+						console.log('与API通信失败！\n');
+					}
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<div class='frosted-glass'></div>
+		<div id="content">
+
+			<div class="search_part">
+
+				<a class="logo" href="folder://">
+          <!-- 嗯嗯嗯嗯嗯 -->
+					<img id="earth_image" class="smaller" src="./earth.png" />
+          <!-- 嗯嗯嗯嗯嗯 -->
+				</a>
+
+				<form onsubmit="return search()" class="search_bar">
+					<button onclick="search()" id="search_submit" value="" ><div class="search icon"></div></button>
+					<span><input class="search" onfocus="showButton()" onblur="hideButton()" type="text" value="" autocomplete="off" id="search_input" ></span>
+				</form>
+
+			</div>
+
+			<script type="text/javascript">
+				function showButton() {document.getElementById("search_submit").style.display = "block"; } function hideButton() {var key = document.getElementById("search_input").value; if (key == "") {document.getElementById("search_submit").style.display = "none"; } } function search(){var key = document.getElementById("search_input").value; if(key != ""){window.via.searchText(key); document.getElementById("search_input").value = ""; } return false; }
+			</script>
+
+		</div>
+	</body>
+</html>
